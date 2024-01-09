@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// test
 // Context Provider
 import { StateProvider } from "./StateProvider";
 
