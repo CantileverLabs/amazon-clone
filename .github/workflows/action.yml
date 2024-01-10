@@ -35,4 +35,5 @@ jobs:
         run: |
           npm start &
           sleep 20
+          echo "Sleep completed"
           npm run test
