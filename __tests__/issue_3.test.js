@@ -1,4 +1,3 @@
-// issue 3
 describe("Issue #3", () => {
   beforeAll(async () => {
     this.page = await globalThis.__BROWSER_GLOBAL__.newPage();
