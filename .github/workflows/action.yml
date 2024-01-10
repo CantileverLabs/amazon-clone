@@ -32,4 +32,6 @@ jobs:
 
       - name: Run test script
         run: |
+          npm start &
+          sleep 20
           npm run test
