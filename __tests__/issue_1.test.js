@@ -10,6 +10,8 @@ describe("Issue #1", () => {
     const div2Selector = ".home__products_section";
 
     // Use Puppeteer to get bounding boxes of the div elements
+    await this.page.waitForSelector(div1Selector);
+    await this.page.waitForSelector(div2Selector);
     const div1BoundingBox = await this.page.$eval(div1Selector, (div) => {
       const { x, y, width, height } = div.getBoundingClientRect();
       return { x, y, width, height };
