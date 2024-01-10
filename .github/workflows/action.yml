@@ -1,0 +1,28 @@
+name: PR Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: main
+
+      - name: Delete folder and replace with master branch
+        run: |
+          pwd
+          rm -rf path/to/folder
+          git checkout master -- path/to/folder
+
+      - name: Run test script
+        run: |
+          npm run test
