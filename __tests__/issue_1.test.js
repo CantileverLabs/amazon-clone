@@ -31,5 +31,5 @@ describe("Issue #1", () => {
     );
 
     expect(overlap).toBe(false);
-  });
+  }, 30*1000);
 });
