@@ -16,6 +16,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
+      - name: Install Chrome Browser
+        run: |
+          apt-get install chromium-browser
+
       - name: Install NPM Dependencies
         run: |
           npm install --legacy-peer-deps
