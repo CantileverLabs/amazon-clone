@@ -16,11 +16,15 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
+      - name: Install NPM Dependencies
+        run: |
+          npm install --legacy-peer-deps
       - name: Delete folder and replace with master branch
         run: |
           pwd
           rm -rf ./__tests__
           git checkout main __tests__
+          ls -a
 
       - name: Run test script
         run: |
