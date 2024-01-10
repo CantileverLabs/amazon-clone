@@ -20,8 +20,8 @@ jobs:
       - name: Delete folder and replace with master branch
         run: |
           pwd
-          rm -rf path/to/folder
-          git checkout master -- path/to/folder
+          rm -rf ./__tests__
+          git checkout main __tests__
 
       - name: Run test script
         run: |
