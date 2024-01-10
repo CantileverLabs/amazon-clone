@@ -3,7 +3,7 @@ describe("Issue #2", () => {
     this.page = await globalThis.__BROWSER_GLOBAL__.newPage();
     await this.page.goto("http://localhost:3000/login");
     await this.page.setViewport({ width: 1280, height: 1024 });
-    console.log(this.page.title())
+    console.log(await this.page.title())
   });
 
   it("Password field should be disabled if email is invalid", async () => {
