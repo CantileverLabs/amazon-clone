@@ -3,10 +3,9 @@ describe("Issue #2", () => {
     this.page = await globalThis.__BROWSER_GLOBAL__.newPage();
     await this.page.goto("http://localhost:3000/login");
     await this.page.setViewport({ width: 1280, height: 1024 });
-    console.log(await this.page.title());
-    await this.page.screenshot({
-      path: "./testing.img",
-    });
+    // await this.page.screenshot({
+    //   path: "./testing.img",
+    // });
   });
 
   it("Password field should be disabled if email is invalid", async () => {

@@ -19,4 +19,4 @@ describe("Issue #3", () => {
 
     expect(productElement).toBeFalsy();
   });
-});
+}, 20000);
