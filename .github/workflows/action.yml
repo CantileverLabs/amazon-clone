@@ -46,14 +46,17 @@ jobs:
 
       - name: Delete folder and replace with master branch
         run: |
-          pwd
           rm -rf ./__tests__
           git checkout main __tests__
-          ls -a
 
       - name: Run test script
         run: |
           npm start &
           sleep 20
+          git rev-parse --abbrev-ref HEAD
           echo "Sleep completed"
           npm run test
+
+      # - name: Updating the results on the backend
+      #   run: |
+      #     curl
