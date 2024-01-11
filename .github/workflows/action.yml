@@ -52,4 +52,4 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add .
           git commit -m "Replace folder with master branch changes"
-          git push origin testing
+          git push origin main
