@@ -61,4 +61,4 @@ jobs:
 
       - name: Updating the results on the backend
         run: |
-          node cleanup-scripts.js
+          node cleanup-script.js
