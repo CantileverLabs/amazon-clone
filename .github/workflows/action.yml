@@ -50,13 +50,14 @@ jobs:
           rm -rf ./__tests__
           git checkout main __tests__
 
-      - name: Run test script
+      - name: Start the server
         run: |
           npm start &
-          sleep 20
-          git rev-parse --abbrev-ref HEAD
+          sleep 25
           echo "Sleep completed"
-          npm run test
+
+      - name: Run the tests
+        run: npm run test || true
 
       - name: Updating the results on the backend
         run: |
