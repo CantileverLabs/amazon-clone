@@ -34,7 +34,7 @@ jobs:
           REACT_APP_MESSAGING_SENDER_ID= ${{secrets.MESSAGING_SENDER_ID}}
           REACT_APP_APP_ID= ${{secrets.APP_ID}}
           REACT_APP_MEASUREMENT_ID= ${{secrets.MEASUREMENT_ID}}
-          BACKEND_API= ${secrets.BACKEND_API}
+          BACKEND_API= ${{secrets.BACKEND_API}}
           " >> .env
 
       - name: Install NPM Dependencies
