@@ -63,7 +63,7 @@ const reducer = (state, action) => {
     }
 
     case "REMOVE_FROM_BASKET":
-      let newBasket = state.basket;
+      let newBasket = { ...state.basket };
 
       delete newBasket[action.id];
 

@@ -17,10 +17,17 @@ const CheckoutProduct = ({ id, title, image, rating, price, count }) => {
   };
 
   const decrementProduct = () => {
-    dispatch({
-      type: "DECREMENT_PRODUCT_COUNT",
-      id: id,
-    });
+    if (count === -1) {
+      dispatch({
+        type: "REMOVE_FROM_BASKET",
+        id: id,
+      });
+    } else {
+      dispatch({
+        type: "DECREMENT_PRODUCT_COUNT",
+        id: id,
+      });
+    }
   };
 
   return (
